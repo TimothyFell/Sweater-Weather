@@ -16,6 +16,7 @@ VCR.configure do |config|
   config.hook_into :webmock
   config.configure_rspec_metadata!
   config.filter_sensitive_data("<GEOCODING_API_KEY>") { ENV['GEOCODING_API_KEY'] }
+  config.filter_sensitive_data("<DARK_SKY_API_KEY>") { ENV['DARK_SKY_API_KEY'] }
 end
 
 SimpleCov.start "rails" do
